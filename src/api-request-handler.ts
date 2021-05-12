@@ -26,6 +26,7 @@ export class ApiRequestHandler {
         this.instance = axios.create({
             baseURL: url,
             maxContentLength: Infinity,
+            maxBodyLength: Infinity,
             headers: {
                 'Authorization': `Bearer ${accessToken}`,
                 'User-Agent': `RevAi-NodeSDK/${sdkVersion}`
